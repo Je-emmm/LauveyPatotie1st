@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Our Little Story ♡</title>
+<meta name="description" content="A tiny private corner of the internet — celebrating 2 months married and 1 month dating. Happy Monthsary, my love. ♡" />
+<meta name="theme-color" content="#f7c9e0" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>♡</text></svg>" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="music-btn-wrap">
+  <button type="button" id="musicBtn" class="music-btn" aria-pressed="false">
+    <svg id="musicIconPlay" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+    <svg id="musicIconPause" class="icon hidden" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+    <span id="musicLabel">♫ Our Song</span>
+  </button>
+  <span id="musicHint" class="music-hint hidden">Add your song at <code>audio/our-song.mp3</code> ♡</span>
+</div>
+
+<button type="button" id="navToggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+  <svg id="menuIconOpen" class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+  <svg id="menuIconClose" class="icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+</button>
+
+<nav id="navPanel" class="nav-panel" aria-label="Jump to section">
+  <p>Jump to… ♡</p>
+  <ul id="navList"></ul>
+</nav>
+
+<main>
+
+  <section id="hero">
+    <div class="bg-wash" aria-hidden="true"></div>
+    <div class="decor-layer" id="heroHearts" aria-hidden="true"></div>
+    <div class="sparkle-layer" id="heroSparkles" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <div class="reveal" style="text-align:center; margin-bottom:1rem;">
+        <svg class="icon glow-heart animate-beat" width="64" height="64" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="color:var(--rose)"><path d="M12 21s-7.5-4.6-10-9.3C.2 8.1 2 4.5 5.5 4c2-.3 3.7.8 4.5 2.2C10.8 4.8 12.5 3.7 14.5 4c3.5.5 5.3 4.1 3.5 7.7C19.5 16.4 12 21 12 21z"/></svg>
+      </div>
+      <h1 class="reveal" style="transition-delay:100ms">Our Little Story <span class="rose">♡</span></h1>
+      <p class="hero-tagline reveal" style="transition-delay:200ms">Two special dates. One very special us.</p>
+
+      <div class="mini-milestones reveal" style="transition-delay:300ms">
+        <div class="mini-milestone m1">
+          <span class="icon-wrap">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--grape)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9Z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg>
+          </span>
+          <p class="title">2 Months Married</p>
+          <p class="date">July 18, 2026</p>
+        </div>
+        <div class="mini-milestone m2">
+          <span class="icon-wrap">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="var(--rose)" stroke="none"><path d="M12 21s-7.5-4.6-10-9.3C.2 8.1 2 4.5 5.5 4c2-.3 3.7.8 4.5 2.2C10.8 4.8 12.5 3.7 14.5 4c3.5.5 5.3 4.1 3.5 7.7C19.5 16.4 12 21 12 21z"/></svg>
+          </span>
+          <p class="title">1 Month Dating</p>
+          <p class="date">August 18, 2026</p>
+        </div>
+      </div>
+
+      <p class="hero-happy reveal" style="transition-delay:400ms">Happy Monthsary, my love. ♡</p>
+
+      <div class="hero-cta-wrap reveal" style="transition-delay:500ms">
+        <a href="#dates" class="btn-cta">
+          Start Our Story ♡
+          <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <a href="#dates" aria-label="Scroll down" class="hero-scroll-down animate-bob">
+      <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+    </a>
+  </section>
+
+  <section id="dates">
+    <div class="sparkle-layer" data-sparkle="9,6" aria-hidden="true"></div>
+    <div class="z-10 max-w-5xl">
+      <h2 class="section-heading reveal">Two Dates That Mean So Much To Me ♡</h2>
+
+      <div class="dates-row">
+        <div class="reveal date-card soft-card accent1" style="transition-delay:0ms">
+          <div class="icon-circle">
+            <svg class="icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--grape)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9Z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg>
+          </div>
+          <h3>The Day We Got Married</h3>
+          <p class="date-big">July 18, 2026</p>
+          <p class="date-time">9:36 PM</p>
+          <p class="date-msg">Getting to call you mine forever still feels unreal. Hanggang ngayon hindi ko parin ma fully process
+            na ikaw na talaga yung taong makakasama ko sa buong buhay koooo. I still remember na 'tong kasal nato ay hindi natin plinano
+            si ate tash lang ang nag help satin para magkaroon ng ring. Asawa, I promised to stay through the easy days, messy days, happy days, and even the super difficult days. No matter what happens, 
+            I want you to know that I chose you with my whole heart. And choosing you, choosing us, is the mosttttt certain thing i've ever done. Mwauhhh.
+          </p>
+        </div>
+
+        <div class="dates-divider">
+          <svg class="icon animate-beat" width="40" height="40" viewBox="0 0 24 24" fill="var(--rose)" stroke="none" aria-hidden="true"><path d="M12 21s-7.5-4.6-10-9.3C.2 8.1 2 4.5 5.5 4c2-.3 3.7.8 4.5 2.2C10.8 4.8 12.5 3.7 14.5 4c3.5.5 5.3 4.1 3.5 7.7C19.5 16.4 12 21 12 21z"/></svg>
+        </div>
+
+        <div class="reveal date-card soft-card accent2" style="transition-delay:150ms">
+          <div class="icon-circle">
+            <svg class="icon" width="32" height="32" viewBox="0 0 24 24" fill="var(--rose)" stroke="none"><path d="M12 21s-7.5-4.6-10-9.3C.2 8.1 2 4.5 5.5 4c2-.3 3.7.8 4.5 2.2C10.8 4.8 12.5 3.7 14.5 4c3.5.5 5.3 4.1 3.5 7.7C19.5 16.4 12 21 12 21z"/></svg>
+          </div>
+          <h3>The Day We Started Dating</h3>
+          <p class="date-big">August 18, 2026</p>
+          <p class="date-time">7:22 PM</p>
+          <p class="date-msg">This is when we finally made it official, I still remember that moment when you told me,
+            "TAYO NA." Im super shocked and honestly didnt know what to say. When u finally made us official suddenly everything feels lighter.
+            When i think of this moment napapa "OMG" ako kasi naiisip ko na "Just what i have done to deserve you?" This is the moment we stopped being a "maybe" and 
+            became an "us". And honestly asawa, I'll always be grateful that we found each other and chose to be togeter..
+          </p>
+        </div>
+      </div>
+
+      <p class="dates-outro reveal" style="transition-delay:200ms">Different dates. Different memories. Both forever special to me. ♡</p>
+    </div>
+  </section>
+
+  <section id="summer">
+    <div class="paws-layer" style="left:1.5rem; top:4rem;" aria-hidden="true">
+      <svg width="88" height="22" viewBox="0 0 100 24"><!-- paws row --></svg>
+    </div>
+    <svg class="doodle-flower animate-wiggle" style="right:2.5rem; top:6rem; width:2.5rem; height:2.5rem; opacity:0.7" width="40" height="40" viewBox="0 0 24 24" fill="var(--lilac)" stroke="none" aria-hidden="true"><circle cx="12" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="12" r="3"/><circle cx="12" cy="12" r="2.5"/></svg>
+
+    <div class="z-10 max-w-5xl">
+      <h2 class="section-heading reveal">My Favorite Girl ♡</h2>
+
+      <div class="summer-grid">
+        <div class="reveal summer-photo-wrap">
+          <div class="summer-photo-inner">
+            <figure class="polaroid" style="transform:rotate(-3deg)">
+              <span class="tape" style="left:50%; top:-13px; transform:translateX(-50%) rotate(-2deg); background:oklch(0.85 0.1 350 / 0.6)" aria-hidden="true"></span>
+              <div class="photo-frame"><img src="photos/summer.jpg" alt="My girlfriend with Summer, our dog" loading="lazy" /></div>
+              <figcaption>my favorite girl ♡</figcaption>
+            </figure>
+            <svg class="icon glow-heart animate-beat badge-heart" width="40" height="40" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 21s-7.5-4.6-10-9.3C.2 8.1 2 4.5 5.5 4c2-.3 3.7.8 4.5 2.2C10.8 4.8 12.5 3.7 14.5 4c3.5.5 5.3 4.1 3.5 7.7C19.5 16.4 12 21 12 21z"/></svg>
+            <svg class="icon badge-paw" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><circle cx="8" cy="8" r="2"/><circle cx="16" cy="8" r="2"/><circle cx="5" cy="13" r="2"/><circle cx="19" cy="13" r="2"/><ellipse cx="12" cy="17" rx="5" ry="4"/></svg>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:150ms">
+          <div class="soft-card">
+            <p>I dont think you fully know what you do to my days. You walk into my life, and somehow lahat is parang kaya ko na. Parang kahit pati ordinary days sobrang saya
+              kapag andayan ikaw. Asawa, there's something in you na every male would fight to have, i cannot fully explain it because even i don't know what is it.
+              Kasi, just being with you makes me alot better, and everything you do makes me feel very loved. Kaya, I promise to try ym best, and promise to learn from my mistakes.
+            </p>
+            <p>Im so grateful kasi you're in my life. Ikaw yung taong nakilala ko, yung taong naging part ng everyday life ko, and eventually became someone i can't imagine not having around.
+              Thank you somuch asawa for being you. Thank you for comfort, for laughter, patience, and even the moments where we just sleep together.
+            </p>
+            <p>Asawa, I dont just love the big moments with you. I love all the tiny ones too. Yung random conversation na inaabot ng oras-oras, mga random jokes na hindi magegets ng iba,
+              yung mga bagay na ginagawa mo and hindi mo narerealize kung gaano ka ka-cute tuwing ginagawa mo'yon. They're the moments I know i'll remember and treasure, beacuse even though tehy're simple, they mean somuch to me.
+            </p>
+            <p class="accent-line">I love you today, and I'll love you even more tomorrow. ♡</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="first-date">
+    <div class="sparkle-layer" data-sparkle="14,7" aria-hidden="true"></div>
+    <div class="z-10 max-w-5xl">
+      <h2 class="section-heading reveal">Our First Date ♡</h2>
+      <div class="reveal text-center" style="margin-top:1rem; transition-delay:100ms"><span class="pill">Memory #01</span></div>
+
+      <div class="reveal" style="transition-delay:150ms">
+        <div class="photo-row">
+          <figure class="polaroid" style="transform:rotate(-5deg)">
+            <span class="tape" style="left:50%; top:-13px; transform:translateX(-50%) rotate(-2deg); background:oklch(0.85 0.09 320 / 0.6)" aria-hidden="true"></span>
+            <div class="photo-frame"><img src="photos/us.jpg" alt="Us together on our first date" loading="lazy" /></div>
+            <figcaption>us ♡</figcaption>
+          </figure>
+          <figure class="polaroid" style="transform:rotate(4deg)">
+            <span class="tape" style="left:50%; top:-13px; transform:translateX(-50%) rotate(-2deg); background:oklch(0.84 0.09 300 / 0.6)" aria-hidden="true"></span>
+            <div class="photo-frame"><img src="photos/ticket.jpg" alt="Another photo of us on our first date" loading="lazy" /></div>
+            <figcaption>ticket</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="reveal" style="transition-delay:200ms">
+        <div class="soft-card" style="margin:3rem auto 0; max-width:42rem;">
+          <p>I still remember the moments nung pinaka unang kita natin, I really wanted to hug you pero nahiya ako bigla WAHHHH, and yung pumapasok lang sa-isip ko that time is "Lauvey, im walking next to lauvey, omg si lauvey katabi ko na" Hanggang sa nakalimutan ko na kuhain yung bag moo kaya late ko na sya nakuha wahhhhhh.
+            being with you makes me really happy, and isa pa sa mga super cute na ginawa natin together is nung nagkakahiyaan pa tayo, nung paikot ikot tayo kasi hinid natin alam kung ano bibilhin natin, yung sa quantum na naka beginner mode ka pero puro miss yung apak mo WAHAHAHAHA.
+          </p>
+          <p>Alam mo, everything na ginawa natin nung first date natin, it's super enjoyable. I cannot help but feel na parang kulang, parang gusto ko pa, na parang ambilis ng oras. At the same time until now i'm still sad kasi i didnt receive the gift you made for me hehe.
+            But, next time you better bring it with you okay??? I really wanna read it na. I cant tell everything that happened to us that day kasi i dont want anyone knowing how happy we are nung araw nayon. HEHE ILOVEYOUSOMUCHH
+          </p>
+          <p class="accent-line">The date i used to fear, is now the date I never wanna forget. ♡</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fears" style="background:linear-gradient(to bottom, #fff, oklch(0.86 0.06 295 / 0.3), var(--blush))">
+    <div class="z-10 max-w-4xl">
+      <h2 class="section-heading reveal">What I Was Feeling That Day…</h2>
+
+      <div style="margin-top:3rem;">
+        <div class="reveal paper" style="transform:rotate(-1.2deg)">
+          <span class="tape" style="left:2rem; top:-13px; transform:rotate(-6deg); background:oklch(0.86 0.08 300 / 0.6)" aria-hidden="true"></span>
+          <span class="tape" style="right:2rem; top:-13px; transform:rotate(6deg); background:oklch(0.86 0.09 350 / 0.6)" aria-hidden="true"></span>
+          <div class="letter-body">
+            <p>Okay, honest confession time.</p>
+            <p>Before our first date, I was a nervous wreck. I kept thinking I'd say something wrong, or do something dumb, or somehow mess up the one thing I really didn't want to mess up. I wanted to make a good impression so badly it made my hands shaky.</p>
+            <p>And syempre andun din yung insecurities na never mong pina-feel saakin. When we hold hands, it makes everything feels lighter. It makes me really happy, and tells myself na "This person is the one i'd risk everything for."</p>
+            <p>And nung naging comfortable na tayo sa isa't-isa, parang lahat ng kaba ko nawala na. I begun to feel you, hold you, hug you, and kiss you. I still remember nung sinabi kong "UWI NA TAYO" kasi WAHAHAHAHA grabe kaba ko non sissss. Pero I know its jsut a joke to make myself little less nervous. And thank you for loving me, for being patience sa fears ko ILOVEYOUUU!.</p>
+            <p class="bold-rose">I was scared, but I'm really glad I took the chance on us. ♡</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="wedding">
+    <div class="decor-layer" data-hearts="12,21,text-lilac" aria-hidden="true"></div>
+    <div class="sparkle-layer" data-sparkle="4,8" aria-hidden="true"></div>
+
+    <div class="z-10 max-w-3xl text-center">
+      <h2 class="section-heading reveal">Two Months Since We Got Married ♡</h2>
+      <p class="milestone-date-label reveal" style="transition-delay:100ms">July 18, 2026 — 9:36 PM</p>
+
+      <div class="reveal" style="transition-delay:200ms">
+        <div class="milestone-badge">
+          <div class="icon-row">
+            <svg class="icon animate-wiggle" width="24" height="24" viewBox="0 0 24 24" fill="var(--lilac)" stroke="none"><circle cx="12" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="12" r="3"/><circle cx="12" cy="12" r="2.5"/></svg>
+            <svg class="icon glow-heart animate-bob" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--grape)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9Z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg>
+            <svg class="icon animate-wiggle" width="24" height="24" viewBox="0 0 24 24" fill="var(--lilac)" stroke="none"><circle cx="12" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="12" r="3"/><circle cx="12" cy="12" r="2.5"/></svg>
+          </div>
+          <p class="big-num">2 Months</p>
+          <p class="sub-hand">Married ♡</p>
+        </div>
+      </div>
+
+      <div class="reveal" style="transition-delay:300ms">
+        <div class="soft-card milestone-text">
+          <p>Hello asawa, Its been two months since we got married, i still remember the day kung saan we started calling each other asawa. It was a joke that turns into our call sign. 
+            I also remember nung time na kung ano-ano lang sinabi ko sa message ko sayo. Sinabi ko pa that time na "Grabe lauvey 5 years na tayo, ambilis ng panahon." Kasi hinid ako ready dun sa message na akala ko bibigyan muna tayo ng time before us mag memessage to each other.
+            and yes, utang ko parin yun sayo hehe. lol
+          </p>
+          <p>What i'm really proud about us is not the happy moments, its us getting ready on what ever happens in the future. We both know that life wont be easy, so us planning on how we'll handle things is omething im very proud of. Because we're not aiming for perfect relationship, we're aiming for forever.</p>
+          <p class="accent-line">Two months married, and this is only the beginning of our story. ♡</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="capybara">
+    <svg class="icon capy-warning w1" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    <svg class="icon capy-warning w2" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+
+    <div class="z-10 max-w-3xl text-center">
+      <h2 class="section-heading reveal">Okay… We Need To Talk About This.</h2>
+
+      <div class="reveal" style="transition-delay:100ms">
+        <div class="capy-photo-wrap">
+          <div class="polaroid" style="transform:rotate(1deg)">
+            <div class="photo-frame"><img src="photos/capy.jpg" alt="You in the capybara costume" loading="lazy" /></div>
+            <p style="font-family:var(--font-hand); margin-top:0.5rem; font-size:1.9rem; color:var(--grape); text-align:center;">He's dead</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="capy-shout reveal" style="transition-delay:200ms">YOU WILL NEVER SEE THIS THING AGAIN.</p>
+
+      <div class="reveal" style="margin-top:2rem; transition-delay:300ms">
+        <button type="button" id="capyBtn" class="capy-reveal-btn animate-wiggle">
+          <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          DO NOT PRESS THIS
+        </button>
+        <div id="capyAnswer" class="capy-reveal-answer hidden">
+          <p class="strong">Asawa, wala na yan si capybara, i dont know what happened to him pero sabi bigla nalang daw sya natagpuang lumulutang sa ilog. 😭❤️</p>
+          <p class="hand">I did that for you ibil emoji😈😈</p>
+          <svg class="icon heart-icon animate-beat" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 21s-7.5-4.6-10-9.3C.2 8.1 2 4.5 5.5 4c2-.3 3.7.8 4.5 2.2C10.8 4.8 12.5 3.7 14.5 4c3.5.5 5.3 4.1 3.5 7.7C19.5 16.4 12 21 12 21z"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dating">
+    <div class="decor-layer" data-hearts="12,33" aria-hidden="true"></div>
+
+    <div class="z-10 max-w-3xl text-center">
+      <h2 class="section-heading reveal">One Month Of Us Being Official ♡</h2>
+      <p class="milestone-date-label reveal" style="transition-delay:100ms">August 18, 2026 — 7:22 PM</p>
+
+      <div class="reveal" style="transition-delay:200ms">
+        <div class="milestone-badge">
+          <svg class="icon glow-heart animate-beat" width="56" height="56" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="color:var(--rose)"><path d="M12 21s-7.5-4.6-10-9.3C.2 8.1 2 4.5 5.5 4c2-.3 3.7.8 4.5 2.2C10.8 4.8 12.5 3.7 14.5 4c3.5.5 5.3 4.1 3.5 7.7C19.5 16.4 12 21 12 21z"/></svg>
+          <p class="big-num">1 Month</p>
+          <p class="sub-hand">Dating ♡</p>
+        </div>
+      </div>
+
+      <div class="reveal" style="transition-delay:300ms">
+        <div class="soft-card milestone-text">
+          <p>One month na tayong officially tayo, asawa, and honestly, ang bilis ng panahon. Parang kailan lang nung naging official tayo, pero ang dami na agad nating napagdaanan at memories na nabuo together. In just one month, you’ve become such a big part of my everyday life, and I wouldn’t want it any other way.</p>
+
+<p>I love all the little things about us, our random conversations, our corny and dumb jokes, our date, the moments na wala naman tayong ginagawa pero masaya pa rin kasi magkasama tayo. I love how we’re slowly learning more about each other, understanding each other better, and becoming more comfortable being ourselves around each other.</p>
+          <p class="accent-line">One month officially dating, and already so many memories I want to keep forever. ♡</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <div class="z-10 max-w-2xl">
+      <h2 class="section-heading reveal">Look How Our Story Is Growing ♡</h2>
+
+      <ol class="timeline-list" id="timelineList">
+        <span class="timeline-rail" aria-hidden="true"></span>
+      </ol>
+    </div>
+  </section>
+
+  <section id="love">
+    <div class="sparkle-layer" data-sparkle="17,6" aria-hidden="true"></div>
+    <div class="z-10 max-w-4xl">
+      <h2 class="section-heading reveal">Little Things I Love About You ♡</h2>
+      <div class="love-grid" id="loveGrid"></div>
+    </div>
+  </section>
+
+  <section id="todo">
+    <div class="z-10 max-w-2xl">
+      <h2 class="section-heading reveal">Things I Still Want To Experience With You ♡</h2>
+      <div class="todo-list" id="todoList"></div>
+      <p class="todo-outro reveal" style="transition-delay:150ms">And I'm sure we'll keep adding more. ♡</p>
+    </div>
+  </section>
+
+  <section id="promise">
+    <div class="z-10 max-w-4xl">
+      <h2 class="section-heading reveal">One Little Promise ♡</h2>
+
+      <div style="margin-top:3rem;">
+        <div class="reveal paper" style="transform:rotate(1deg)">
+          <span class="tape" style="left:2rem; top:-13px; transform:rotate(-6deg); background:oklch(0.86 0.08 300 / 0.6)" aria-hidden="true"></span>
+          <span class="tape" style="right:2rem; top:-13px; transform:rotate(6deg); background:oklch(0.86 0.09 350 / 0.6)" aria-hidden="true"></span>
+          <div class="letter-body">
+            <p>I can't promise that every day will be perfect.</p>
+            <p>I can't promise that we'll never misunderstand each other.</p>
+            <p>But I can promise that I'll keep trying to understand you, communicate with you, appreciate you, and grow with you.</p>
+            <p>I want to keep making memories with you.</p>
+            <p>I want to keep learning about you.</p>
+            <p class="bold-rose">And most importantly, I want to keep loving you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIG LETTER -->
+  <section id="letter" style="background:linear-gradient(to bottom, #fff, oklch(0.86 0.06 295 / 0.4), var(--blush)); padding-top:7rem; padding-bottom:7rem;">
+    <div class="decor-layer" data-hearts="10,41,text-lilac" aria-hidden="true"></div>
+
+    <div class="z-10 max-w-4xl">
+      <h2 class="section-heading reveal">A Letter For My Love ♡</h2>
+
+      <div style="margin-top:3rem;">
+        <div class="reveal paper" style="transform:rotate(-0.6deg); max-width:48rem;">
+          <span class="tape" style="left:2rem; top:-13px; transform:rotate(-6deg); background:oklch(0.86 0.08 300 / 0.6)" aria-hidden="true"></span>
+          <span class="tape" style="right:2rem; top:-13px; transform:rotate(6deg); background:oklch(0.86 0.09 350 / 0.6)" aria-hidden="true"></span>
+          <div class="letter-body">
+            <p>My ASAWA,</p>
+            <p>I've been trying to figure out how to say all of this, and I don't think I'll ever get it perfect... so I'm just going to say it honestly. I love you. A lot. More than I usually know how to show on a normal Tuesday.</p>
+            <p>Tuwing naiisip ko yung wedding natin, hindi parin ako makapaniwala. Kasi nagulat din talaga ako nung time na biglang sinabi ni ate na "Mag kasal narin kaoy" and she spent quite alot of money for us.
+              pero alam mo kahit na biglaan yung wedding natin. It still makes me very happy kasi yun yung time na nagka-aminan tayo pero wala paring courting na nangyayari.
+            </p>
+            <p>We've grown so much already. We've had the sweet moments and the ridiculous ones, and yes, including dun kay capybara na hindi mo na makikita. I love that we can be soft and serious one minute and completely stupid together.</p>
+            <p>I'm grateful for you in a way that's hard to fit into words. For your smile, your laugh, the way you care, the way you make an ordinary day feels special. You make me happy without even trying, and I don't take a second of it for granted.</p>
+            <p>I don't want my love for you to stay the same size it is right now. I want it to keep growing. I want to keep learning you, keep choosing you, and love you more as time goes on. Two months married, one month dating, they're not the whole story. They're just the beginning, and I'm so excited for all the memories we haven't made yet.</p>
+            <p class="bold-rose">I love you, more than I probably know how to put into words.</p>
+            <p class="bold-rose">Happy 2 months married and happy 1 month dating, my love.</p>
+            <p class="bold-rose">Here's to us, and to all the memories we haven't made yet. ♡</p>
+            <p class="signoff">Love,<br />Your boyfriend ♡</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUTURE -->
+  <section id="future">
+    <div class="sparkle-layer" data-sparkle="23,7" aria-hidden="true"></div>
+    <div class="z-10 max-w-5xl">
+      <h2 class="section-heading reveal">To Be Continued… ♡</h2>
+
+      <div class="future-grid" id="futureGrid"></div>
+
+      <p class="future-outro reveal" style="transition-delay:150ms">We haven't written the whole story yet.</p>
+      <p class="future-outro rose reveal" style="transition-delay:250ms">So let's keep writing it together. ♡</p>
+    </div>
+  </section>
+
+  <!-- COUNTERS -->
+  <section id="counters">
+    <div class="z-10 max-w-4xl">
+      <h2 class="section-heading reveal">Our Love, In Time ♡</h2>
+
+      <div class="reveal" style="transition-delay:100ms">
+        <div class="counters-row">
+          <div class="counter-card c1">
+            <div class="decor-layer" data-hearts="7,55,text-rose-dim" aria-hidden="true"></div>
+            <div class="content">
+              <div class="icon-circle">
+                <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--grape)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9Z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg>
+              </div>
+              <p class="heading">We've Been Married For</p>
+              <div class="time-cells" id="marriedCells">
+                <div class="time-cell"><span class="val" data-u="d">00</span><span class="lbl">days</span></div>
+                <div class="time-cell"><span class="val" data-u="h">00</span><span class="lbl">hrs</span></div>
+                <div class="time-cell"><span class="val" data-u="m">00</span><span class="lbl">min</span></div>
+                <div class="time-cell"><span class="val" data-u="s">00</span><span class="lbl">sec</span></div>
+              </div>
+              <p class="since">Since July 18, 2026 • 9:36 PM</p>
+            </div>
+          </div>
+
+          <div class="counter-card c2">
+            <div class="decor-layer" data-hearts="7,60,text-rose-dim" aria-hidden="true"></div>
+            <div class="content">
+              <div class="icon-circle">
+                <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="var(--rose)" stroke="none"><path d="M12 21s-7.5-4.6-10-9.3C.2 8.1 2 4.5 5.5 4c2-.3 3.7.8 4.5 2.2C10.8 4.8 12.5 3.7 14.5 4c3.5.5 5.3 4.1 3.5 7.7C19.5 16.4 12 21 12 21z"/></svg>
+              </div>
+              <p class="heading">We've Been Dating For</p>
+              <div class="time-cells" id="datingCells">
+                <div class="time-cell"><span class="val" data-u="d">00</span><span class="lbl">days</span></div>
+                <div class="time-cell"><span class="val" data-u="h">00</span><span class="lbl">hrs</span></div>
+                <div class="time-cell"><span class="val" data-u="m">00</span><span class="lbl">min</span></div>
+                <div class="time-cell"><span class="val" data-u="s">00</span><span class="lbl">sec</span></div>
+              </div>
+              <p class="since">Since August 18, 2026 • 7:22 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="counters-outro reveal" style="transition-delay:200ms">And every second is another little piece of our story. ♡</p>
+    </div>
+  </section>
+
+  <!-- GOODBYE -->
+  <section id="goodbye">
+    <div class="decor-layer" data-hearts="18,57" aria-hidden="true"></div>
+    <div class="sparkle-layer" data-sparkle="8,10" aria-hidden="true"></div>
+
+    <div class="goodbye-inner">
+      <div class="reveal text-center">
+        <svg class="icon glow-heart animate-beat" width="96" height="96" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="color:var(--rose)"><path d="M12 21s-7.5-4.6-10-9.3C.2 8.1 2 4.5 5.5 4c2-.3 3.7.8 4.5 2.2C10.8 4.8 12.5 3.7 14.5 4c3.5.5 5.3 4.1 3.5 7.7C19.5 16.4 12 21 12 21z"/></svg>
+      </div>
+
+      <h2 class="reveal" style="transition-delay:150ms">Thank You For Being My Person. ♡</h2>
+
+      <div class="goodbye-lines reveal" style="transition-delay:300ms">
+        <p>2 Months Married.</p>
+        <p>1 Month Dating.</p>
+        <p class="small">And countless memories still waiting for us.</p>
+      </div>
+
+      <p class="goodbye-final reveal" style="transition-delay:450ms">I love you.</p>
+
+      <div class="goodbye-cta-wrap reveal" style="transition-delay:600ms">
+        <a href="#hero" class="btn-cta" style="background:linear-gradient(to right, var(--grape), var(--pink));">
+          <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+          Back To The Beginning ↑
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
